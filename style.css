@@ -705,3 +705,49 @@ body {
     display: none;
   }
 }
+
+/* ── Ссылка на основной сайт в футере ── */
+.footer__main-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer__main-link-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.25s ease;
+}
+
+.footer__main-link-arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.footer__main-link:hover .footer__main-link-text {
+  color: #007BFF;
+}
+
+.footer__main-link:hover .footer__main-link-arrow {
+  transform: translateX(5px);
+}
+
+/* ── Адаптив ── */
+@media (max-width: 480px) {
+  .footer__main-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .footer__main-link-text {
+    font-size: 16px;
+  }
+}
